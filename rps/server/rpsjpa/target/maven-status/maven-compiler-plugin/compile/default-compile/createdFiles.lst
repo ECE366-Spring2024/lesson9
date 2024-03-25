@@ -1,0 +1,5 @@
+com/example/inclass/rpsjpa/data/PlayerRepository.class
+com/example/inclass/rpsjpa/RpsjpaApplication.class
+com/example/inclass/rpsjpa/business/PlayerService.class
+com/example/inclass/rpsjpa/data/Player.class
+com/example/inclass/rpsjpa/webservice/WebserviceController.class

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RPS: Players</title>
+</head>
+<body>
+<h1>RPS Players</h1>
+<table>
+    <tr>
+        <td>Player Name</td>
+        <td>Password</td>
+        <td>Total Wins</td>
+    </tr>
+    <tr th:each="player: ${players}">
+        <td th:text="${player.playerName}">UserName</td>
+        <td th:text="${player.password}">Password</td>
+        <td th:text="${player.win}">TotalGames</td>
+    </tr>
+</table>
+</body>
+</html>
