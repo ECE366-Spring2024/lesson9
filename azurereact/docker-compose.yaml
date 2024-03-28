@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ui:
+    build: .
+    image: ece366acr.azurecr.io/azurereact
+    container_name: azurereact
+    ports:
+      - "8080:8080"
