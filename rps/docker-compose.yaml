@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: rpsacr2.azurecr.io/db
+    image: rpsacr7.azurecr.io/db
     build: db
     environment:
     - POSTGRES_DB=postgres
@@ -13,7 +13,7 @@ services:
     restart: always
   app:
     build: server/rpsjpa
-    image: rpsacr2.azurecr.io/app
+    image: rpsacr7.azurecr.io/app
     container_name: app
     expose:
     - 8080:8080
@@ -26,7 +26,7 @@ services:
     - db
   ui: 
     build: client/rpsui
-    image: rpsacr2.azurecr.io/ui
+    image: rpsacr7.azurecr.io/ui
     container_name: ui
     ports:
     - 80:80

@@ -28,10 +28,13 @@ function Home() {
 
     const loadUsers = async () => {
       try {
+        const ip = window.location.host;
+        console.log(ip);
+
         const token = user && await user.getIdToken();
         console.log(token);
-        const headers = token ? {Authorization: `Bearer ${token}`} : {};
-        const response = await axios.get(`/api/getAllPlayers`, {headers});
+        const headers = token ? {Authorization: `Bearer ${token}`, "Access-Control-Allow-Origin": "*"} : {};
+        const response = await axios.get(`http://` + ip + `:8080/api/getAllPlayers`, {headers});
         setData(response.data)
         /*
         const response = await axios.get(`http://localhost:8080/api/getAllPlayers`);
